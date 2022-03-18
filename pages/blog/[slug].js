@@ -2,7 +2,10 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import marked from "marked";
+import Head from "next/head";
 import Link from "next/link";
+import { Comments } from "../../components/CommentBox";
+import { CommentBox } from "../../components/CommentBox";
 
 export default function PostPage({
   frontmatter: { title, date, cover_image },
@@ -11,6 +14,9 @@ export default function PostPage({
 }) {
   return (
     <>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <Link href="/">
         <a className="btn btn-back">Go Back</a>
       </Link>
@@ -21,6 +27,14 @@ export default function PostPage({
         <div className="post-body">
           <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>
+      </div>
+      <h2 className="text-2xl font-bold mb-3 mt-10">Comments</h2>
+      <div>
+        <Comments />
+      </div>
+      <h2 className="text-2xl font-bold mb-3 mt-10">Add Comment</h2>
+      <div>
+        <CommentBox />
       </div>
     </>
   );

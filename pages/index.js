@@ -2,16 +2,16 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
-import Post from "../components/Post";
+import { Post } from "../components/Post";
 import { sortByDate } from "../utils";
 
 export default function Home({ posts }) {
   return (
     <div>
       <Head>
-        <title>Dev Blog</title>
+        <title>Coding Platform</title>
       </Head>
-
+      <h2 className="text-2xl font-bold mb-3">All Posts</h2>
       <div className="posts">
         {posts.map((post, index) => (
           <Post key={index} post={post} />

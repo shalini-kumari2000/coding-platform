@@ -25,19 +25,7 @@ a {
 }
 
 img {
-  width: 100%;
   border-radius: 10px;
-}
-
-header {
-  background: steelblue;
-  color: #fff;
-  padding: 5px;
-  margin-bottom: 40px;
-}
-
-header a {
-  color: #fff;
 }
 
 .container {
@@ -87,6 +75,12 @@ header a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.feature-card {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 .card-page {
   padding: 15px 30px;
 }
@@ -120,4 +114,81 @@ ol {
   .posts {
     grid-template-columns: 1fr;
   }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.user-menu-container {
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-menu-trigger {
+  background: #ffffff;
+  border-radius: 90px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border: none;
+  vertical-align: middle;
+  transition: box-shadow 0.4s ease;
+  margin-left: auto; /* Strictly for positioning */
+}
+
+.user-menu-trigger:hover {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-menu-trigger span {
+  font-weight: 700;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.user-menu-trigger img {
+  border-radius: 90px;
+}
+
+.user-menu {
+  background: #ffffff;
+  border-radius: 8px;
+  position: absolute;
+  top: 70px;
+  width: 200px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.user-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.user-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-menu li {
+  border-bottom: 1px solid #dddddd;
+}
+
+.user-menu li a {
+  text-decoration: none;
+  color: #333333;
+  padding: 15px 20px;
+  display: flex;
 }
