@@ -1,9 +1,9 @@
 ---
-title: 'Writing Great Unit Tests'
-date: 'March 12, 2021'
-level: 'Difficulty Level : Hard'
-excerpt: 'We will look at 10 simple tips and tricks on writing unit tests in JavaScript'
-cover_image: '/images/posts/img7.jpg'
+title: 'Linear Diophantine Equations'
+date: 'March 4, 2022'
+level: 'Difficulty Level : Medium'
+excerpt: 'A Diophantine equation is a polynomial equation, usually in two or more unknowns, such that only the integral solutions are required.'
+cover_image: '/images/posts/img1.jpg'
 ---
 
 Lorem [markdownum](http://insunt.org/inpositaque), et sanguine rutilos dixit

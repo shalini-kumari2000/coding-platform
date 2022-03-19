@@ -1,6 +1,7 @@
 ---
 title: "What's New In PHP 8?"
 date: 'March 7, 2021'
+level: 'Difficulty Level : Medium'
 excerpt: 'In this article we will look at some of the new features offered in version 8 of PHP'
 cover_image: '/images/posts/img4.jpg'
 ---

@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { useRecoilState } from "recoil";
 import { loginState } from "../atom/loginState";
 import { useDetectOutsideClick } from "../utils/useDetectOutsideClick";
+import AddPost from "./AddPost";
 import SignIn from "./SignIn";
 
 export default function Header() {
@@ -31,6 +32,9 @@ export default function Header() {
           <div className="flex md:order-2">
             {isLoggedIn === true ? (
               <div className="navbar__left flex dash-container">
+                <div>
+                  <AddPost />
+                </div>
                 <div className="user-menu-container">
                   <button onClick={onClick} className="user-menu-trigger">
                     <span>Welcome, Shalini</span>
@@ -96,6 +100,7 @@ export default function Header() {
               </div>
             )}
           </div>
+
           <div
             className="justify-between items-center hidden md:flex md:w-auto md:order-1"
             id="mobile-menu-3"

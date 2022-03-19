@@ -33,6 +33,7 @@ export function PostCard({ post }) {
       <h3 className="text-l font-bold mb-3 text-center">
         {post.frontmatter.title}
       </h3>
+      <h4 className="text-m mb-3 text-center">{post.frontmatter.level}</h4>
       <div className="pt-4 text-center">
         <Link href={`/blog/${post.slug}`}>
           <a className="btn">Read More</a>
@@ -50,8 +51,8 @@ export function Post({ post }) {
       <div className="post-date">Posted on {post.frontmatter.date}</div>
 
       <h3 className="text-l font-bold mb-3">{post.frontmatter.title}</h3>
-
-      <p>{post.frontmatter.excerpt}</p>
+      <h4 className="text-m mb-3">{post.frontmatter.level}</h4>
+      <p className="mb-2">{post.frontmatter.excerpt}</p>
 
       <Link href={`/blog/${post.slug}`}>
         <a className="btn">Continue Reading</a>

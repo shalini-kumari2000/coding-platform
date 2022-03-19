@@ -129,7 +129,7 @@ ol {
 
 .user-menu-trigger {
   background: #ffffff;
-  border-radius: 90px;
+  border-radius: 4px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -144,6 +144,7 @@ ol {
 
 .user-menu-trigger:hover {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(0.98);
 }
 
 .user-menu-trigger span {
@@ -151,6 +152,7 @@ ol {
   vertical-align: middle;
   font-size: 14px;
   margin: 0 10px;
+  padding: 0.3em 0rem 0.3em 0rem;
 }
 
 .user-menu-trigger img {

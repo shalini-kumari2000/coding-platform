@@ -77,25 +77,74 @@ export class CommentBox extends React.Component {
     };
 
     return (
-      <div className="flex m-10">
-        <div>
-          <div className="input" style={inputStyle}>
-            <textarea
-              className="input"
-              style={inputStyle}
-              value={this.state.markdown}
-              onChange={(e) => {
-                this.updateMarkdown(e.target.value);
-              }}
-            ></textarea>
+      <div className="card card-page">
+        <form>
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="username"
+            >
+              Username
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="username"
+              type="text"
+              placeholder="Enter username"
+            />
           </div>
-          <div
-            style={outputStyle}
-            dangerouslySetInnerHTML={{
-              __html: marked(this.state.markdown),
-            }}
-          ></div>
-        </div>
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="username"
+            >
+              Email
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="username"
+              type="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="post-content"
+            >
+              Comment
+            </label>
+            <textarea
+              className="shadow appearance-none border py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline resize-y rounded-md w-full h-400"
+              placeholder="Enter Comment Here"
+            ></textarea>
+            {/* <div className="flex m-10">
+              <div>
+                <div className="input" style={inputStyle}>
+                  <textarea
+                    className="input"
+                    style={inputStyle}
+                    value={this.state.markdown}
+                    onChange={(e) => {
+                      this.updateMarkdown(e.target.value);
+                    }}
+                  ></textarea>
+                </div>
+                <div
+                  style={outputStyle}
+                  dangerouslySetInnerHTML={{
+                    __html: marked(this.state.markdown),
+                  }}
+                ></div>
+              </div>
+            </div> */}
+          </div>
+        </form>
+        <button>
+          <a href="#!" className="btn w-full">
+            Comment
+          </a>
+        </button>
       </div>
     );
   }
