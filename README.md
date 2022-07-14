@@ -10,7 +10,7 @@
 - Recoil for State Management of Logged In User.
 - Featured Posts are showcased on Top.
 - Tailwind of Styling
-- Verel for deployment
+- Vercel for deployment
 
 <p align="center">
   <a href="https://coding-platform-navy.vercel.app/">
